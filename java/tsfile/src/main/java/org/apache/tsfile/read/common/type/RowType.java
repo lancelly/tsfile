@@ -95,7 +95,7 @@ public class RowType extends AbstractType {
   public String getDisplayName() {
     // Convert to standard sql name
     StringBuilder result = new StringBuilder();
-    result.append("row").append('(');
+    result.append(ROW_NAME).append('(');
     for (Field field : fields) {
       String typeDisplayName = field.getType().getDisplayName();
       if (field.getName().isPresent()) {
